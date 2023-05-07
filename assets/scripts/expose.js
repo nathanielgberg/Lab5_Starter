@@ -29,7 +29,6 @@ function init() {
 
   function handleVolumeChange(event) {
     const volume = event.target.value;
-    // Set the correct volume icon
     if (volume >= 67) {
       document.querySelector('img').src = 'assets/icons/volume-level-3.svg';
     } else if (volume >= 33) {
@@ -40,7 +39,6 @@ function init() {
       document.querySelector('img').src = 'assets/icons/volume-level-0.svg';
     }
 
-    // Set the corresponding volume for the audio element
     audioElement.volume = volume / 100;
   }
 
@@ -52,7 +50,6 @@ function init() {
     audioElement.play();
 
     if (selectedHorn === 'party-horn') {
-      // Show confetti
       jsConfetti.addConfetti();
     }
   }
