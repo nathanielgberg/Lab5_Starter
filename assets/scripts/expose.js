@@ -16,13 +16,13 @@ function init() {
   function handleHornChange(event) {
     const selectedHorn = event.target.value;
     if (selectedHorn === 'air-horn') {
-      imageElement.src = 'assets/images/air-horn.svg';
+      imageElement.src = 'air-horn.svg';
     } else if (selectedHorn === 'car-horn') {
-      imageElement.src = 'assets/images/car-horn.svg';
+      imageElement.src = 'car-horn.svg';
     } else if (selectedHorn === 'party-horn') {
-      imageElement.src = 'assets/images/party-horn.svg';
+      imageElement.src = 'party-horn.svg';
     } else {
-      imageElement.src = 'assets/images/no-image.png';
+      imageElement.src = 'no-image.png';
     }
     audioElement.src = `assets/audio/${selectedHorn}.mp3`;
   }
