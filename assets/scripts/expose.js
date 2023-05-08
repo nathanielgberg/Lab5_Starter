@@ -3,11 +3,11 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  const hornDropdown = document.querySelector('#horn-select');
-  const volumeSlider = document.querySelector('#volume');
-  const playButton = document.querySelector('button');
-  const imageElement = document.querySelector('img');
-  const audioElement = document.querySelector('audio');
+  const hornDropdown = document.querySelector("#horn-select");
+  const volumeSlider = document.querySelector("#volume");
+  const playButton = document.querySelector("button");
+  const imageElement = document.querySelector("img");
+  const audioElement = document.querySelector("audio");
 
   hornDropdown.addEventListener('change', handleHornChange);
   volumeSlider.addEventListener('input', handleVolumeChange);
@@ -15,6 +15,7 @@ function init() {
 
   function handleHornChange(event) {
     const selectedHorn = event.target.value;
+    // Set the correct image
     if (selectedHorn === 'air-horn') {
       imageElement.src = 'assets/images/air-horn.svg';
     } else if (selectedHorn === 'car-horn') {
@@ -24,11 +25,14 @@ function init() {
     } else {
       imageElement.src = 'assets/images/no-image.png';
     }
+
+    // Set the correct audio sound file
     audioElement.src = `assets/audio/${selectedHorn}.mp3`;
   }
 
   function handleVolumeChange(event) {
     const volume = event.target.value;
+    // Set the correct volume icon
     if (volume >= 67) {
       document.querySelector('img').src = 'assets/icons/volume-level-3.svg';
     } else if (volume >= 33) {
@@ -39,6 +43,7 @@ function init() {
       document.querySelector('img').src = 'assets/icons/volume-level-0.svg';
     }
 
+    // Set the corresponding volume for the audio element
     audioElement.volume = volume / 100;
   }
 
@@ -50,7 +55,9 @@ function init() {
     audioElement.play();
 
     if (selectedHorn === 'party-horn') {
+      // Show confetti
       jsConfetti.addConfetti();
     }
   }
 }
+
