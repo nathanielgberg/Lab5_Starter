@@ -8,7 +8,7 @@ function init() {
   const playButton = document.querySelector("button");
   const imageElement = document.querySelector("img");
   const audioElement = document.querySelector("audio");
-  const jsConfetti = new JSConfetti()
+  const jsConfetti = new JSConfetti();
 
   hornDropdown.addEventListener('change', handleHornChange);
   volumeSlider.addEventListener('input', handleVolumeChange);
