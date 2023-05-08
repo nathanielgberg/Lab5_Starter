@@ -30,18 +30,18 @@ function init() {
     // Set the correct audio sound file
     audioElement.src = `assets/audio/${selectedHorn}.mp3`;
   }
-
+  
   function handleVolumeChange(event) {
     const volume = event.target.value;
     // Set the correct volume icon
     if (volume >= 67) {
-      document.querySelector('img').src = 'assets/icons/volume-level-3.svg';
+      document.querySelector('#volume-controls img').src = 'assets/icons/volume-level-3.svg';
     } else if (volume >= 33) {
-      document.querySelector('img').src = 'assets/icons/volume-level-2.svg';
+      document.querySelector('#volume-controls img').src = 'assets/icons/volume-level-2.svg';
     } else if (volume >= 1) {
-      document.querySelector('img').src = 'assets/icons/volume-level-1.svg';
+      document.querySelector('#volume-controls img').src = 'assets/icons/volume-level-1.svg';
     } else {
-      document.querySelector('img').src = 'assets/icons/volume-level-0.svg';
+      document.querySelector('#volume-controls img').src = 'assets/icons/volume-level-0.svg';
     }
 
     // Set the corresponding volume for the audio element
